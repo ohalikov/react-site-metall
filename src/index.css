@@ -89,6 +89,10 @@ p {
     color: var(--color-light-grey-variant)
 }
 
+.text-span-color {
+    color: var(--color-golden)
+}
+
 a {
     color: var(--color-primary);
     transition: var(--transition)
@@ -124,10 +128,17 @@ a:hover {
 
 img {
     display: block;
-    width: 100%;
     object-fit: cover;
 }
 
+
+/* ============= MEDIA QUERIES (LARGE DEVICES) ========= */
+@media screen and (max-width: 1280px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+}
 
 /* ============= MEDIA QUERIES (MEDIUM DEVICES) ========= */
 

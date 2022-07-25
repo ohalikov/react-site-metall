@@ -1,57 +1,67 @@
-.header-section{
+.header-block {
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100vh;
-    position: relative;
-    overflow-x: hidden;
-    background: url(../../assets/bg-metall-constructions.jpg);
-    background-size: cover;
-
+    height: 60px;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
 }
 
-.header-section__overlay-background{
+.header-block__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .3s;
+    z-index: 50
+}
+
+.header-block__left {
+    width: 30%;
+    padding-top: 0%;
+    padding-left: 5%
     
+}
+.header-block__left > img {
+    max-width: 100%;
+    height: auto
+}
+
+.header-block__right {
     display: flex;
+    width: 70%;
+    justify-content: flex-end;
+    margin-right: 10%;
+    font-size: 0.9em;
+    z-index: 50
+}
+
+.header-block__right__block-item {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    z-index: 50;
+}
+
+.header-block__right__block-item__icon {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    background: var(--color-bg-black);
-    min-height: 100vh;
-
+    padding: 6px 0px;
 }
 
-.header-section__h1 {
+.header-block__right__block-item__text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 14px;
+    z-index: 50;
+    line-height: 1.5
+}
+
+.header-block__right__phone {
+    text-decoration: none !important;
     color: var(--color-white)
-}
-
-.header-section__h1__span {
-    color: var(--color-golden)
-}
-
-.header-section__paragraph {
-    padding-top: 1.5rem;
-    width: 70%
-}
-
-
-/* ============= MEDIA QUERIES (SMALL DEVICES) ========= */
-
-
-@media screen and (max-width: 600px) {
-
-    section {
-        margin-top: 4rem;
-    }
-
-    h1 {
-        font-size: 1.75rem;
-    }
-    section > h2 {
-        font-size: 1.5rem;
-    }
-    .header-section__paragraph {
-        width: 100%;
-    }
 }

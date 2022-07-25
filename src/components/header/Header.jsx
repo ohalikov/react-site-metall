@@ -1,31 +1,69 @@
 import React from 'react'
-import FullForm from '../common/full-form/FullForm'
-import './header.css'
-import '../common/full-form/full-form.css'
-
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+
+import images from '../../constants/images';
+
+
+import './header.css';
+
+
 
 const Header = () => {
   return (
-    <header className='header-section'>
-      <div className='header-section__overlay-background section-paddings'>
-        <Container fluid>
-          <Row>
-            <Col lg={7}>
-              <h1 className='header-section__h1'>Монтаж <span className='header-section__h1__span'>быстровозводимых зданий</span> в Тюмени</h1>
-              <p className='header-section__paragraph text-light-paragraph'>Дешевле, чем от производителей. Договор. Гарантия 5 лет. <br/>
-              И экономия вашего бюджета, благодаря грамотным техническим решениям.</p>
-            </Col>
-            <Col lg={5}>
-              <FullForm />
-            </Col>
-          </Row>
-        </Container>
-      </div>
+    <header className='header-block'>
+      <Container fluid>
+        <Row>
+        
+          <div className='header-block__top'>
+            <div className='header-block__left'>
+                  <a href="/" className='header-block__top__image-section'>asdfas
+                    {/* <img src="https://picsum.photos/seed/picsum/200/300" className='header-block__top__image-section__logo-img' alt="Логотип Возведения металлоконструкций"/>*/}
+                  </a>
+            </div>
+            <div className='header-block__right'>
+              
+              <div className='header-block__right__block-item'>
+                <div className='header-block__right__block-item__icon'>
+                  <img className="fluid" src={images.loc} alt="" />
+                </div>
+                <div className='header-block__right__block-item__text'>
+                  43 объекта<br/> обслуживаем каждый год
+                </div>
+              </div>
+
+              <div className='header-block__right__block-item'>
+                <div className='header-block__right__block-item__text'>
+                  Работаем 24 часа <span className='text-span-color'>И вывозим с 2005 года</span>
+                </div>
+              </div>
+
+              <div className='header-block__right__block-item'>
+                <div className='header-block__right__block-item__icon'>
+                  <img className="fluid" src={images.env} alt="Отправьте ваше письмо нам" />
+                  
+                  <div className='header-block__right__block-item__icon'>
+                    <img className="fluid" src={images.phone} alt="Позвоните нам" />
+                  </div>
+
+                </div>
+                <div className='header-block__right__block-item__text'>
+                  <span className="mail">info@montaj.ru</span> 
+                  <a href="tel:+73452519160" className="header-block__right__phone">+7 (3452) 11-11-11</a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div className='header-block__bottom'>
+
+          </div>
+        </Row>
+      </Container>
+    
     </header>
-  
   )
 }
+
 export default Header

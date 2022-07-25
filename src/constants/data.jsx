@@ -1,0 +1,5 @@
+const textHeaders = [
+    {
+        title: 'Привет!'
+    }
+]
